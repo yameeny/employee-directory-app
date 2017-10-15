@@ -1,6 +1,10 @@
 {
   "name": "employee-directory",
   "main": "server.js",
+  "engines": {
+    "node": "6.10.3",
+    "npm": "3.10.10"
+  },
   "dependencies": {
     "bower": "^1.8.2",
     "method-override": "^2.0.2",
@@ -11,6 +15,7 @@
     "mongoose": "^4.3.4"
   },
   "scripts": {
-    "postinstall": "node node_modules/bower/bin/bower install"
+    "start": "node server.js",
+    "postinstall": "bower install"
   }
 }
