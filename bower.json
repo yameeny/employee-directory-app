@@ -1,5 +1,5 @@
 {
-	"name": "employeeDirectoryApp",
+	"name": "employee-directory-app",
 	"version": "1.0.0",
 	"dependencies": {
 		"bootstrap": "latest",
