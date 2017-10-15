@@ -1,0 +1,4 @@
+# Bower Files and node_modules
+node_modules/
+dist/
+public/libs/

@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1>Welcome to Employee directory app</h1>
+        
+        <!--        Display all employees -->
+        <table class="table">
+    
+            <thead> 
+                <tr> 
+                    <th>Name</th> 
+                    <th>Email</th> 
+                    <th>DOB</th> 
+                    <th>Department</th> 
+                    <th>Gender</th> 
+                    <th>Age</th> 
+                    <th>
+                        
+                        
+                    </th>
+                </tr> 
+            </thead>
+            
+            <tbody> 
+                
+                <!-- For Add or Update Employee-->
+                <tr> 
+                    <td>
+                        <input type="text" class="form-control" placeholder="Name" ng-model="emp.name">
+                    </td> 
+                    <td>
+                        <input type="text" class="form-control" placeholder="Email" ng-model="emp.email">
+                    </td> 
+                    <td>
+                        <input type="date"  onkeydown="return false" class="form-control" placeholder="DOB" ng-model="emp.dob" min="2006-01-01" max="2016-09-30">
+                    </td> 
+                    <td>
+                        <input type="text" class="form-control" placeholder="Department" ng-model="emp.dept">
+                    </td> 
+                    <td>
+                        <input type="text" class="form-control" placeholder="Gender" ng-model="emp.gender">
+                    </td> 
+                    <td> - </td> 
+                    <td>
+                        <!-- Edit -->
+                        <button type="button" class="btn btn-success" ng-click="addEmployee(emp)">ADD<span class="glyphicon glyphicon-plus"></span></button>
+                        
+                        <!-- Delete -->
+                        <button type="button" class="btn btn-primary" ng-click="updateEmployee(emp)">UPD<span class="glyphicon glyphicon-edit"></span></button>
+                        
+                    </td>
+                </tr> 
+                
+                <!-- Display all the Employee Records-->
+                <tr ng-repeat="e in Employees"> 
+                    <td>{{e.name}}</td> 
+                    <td>{{e.email}}</td> 
+                    <td>{{e.displayDate}}</td> 
+                    <td>{{e.department}}</td> 
+                    <td>{{e.gender}}</td> 
+                    <td>{{e.age}}</td> 
+                    <td>
+                        <!-- Edit -->
+                        <button type="button" class="btn btn-success" ng-click="editEmployee(e)">Edit</button>
+                        
+                        <!-- Delete -->
+                        <button type="button" class="btn btn-danger" ng-click="deleteEmployee(e)">Delete</button>
+                        
+                    </td>
+                </tr> 
+            </tbody>
+            
+            
+        </table>
+        
+        
+    </div>
+</div>
